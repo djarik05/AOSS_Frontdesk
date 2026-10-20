@@ -1,0 +1,81 @@
+import type { User, Dentist } from '../types';
+
+export const mockDentists: Dentist[] = [
+  {
+    id: 'd1',
+    firstName: 'Rohan',
+    lastName: 'Mehta',
+    fullName: 'Dr. Rohan Mehta',
+    email: 'rohan@mehtadental.in',
+    phone: '+91 99000 11111',
+    role: 'dentist',
+    isActive: true,
+    lastActivity: '2026-10-20T09:30:00Z',
+    createdAt: '2024-01-01T00:00:00Z',
+    specialization: 'General & Cosmetic Dentistry',
+    registrationNumber: 'KA-DEN-2015-04821',
+    color: '#7658E8',
+    availability: [
+      { day: 'monday', startTime: '09:00', endTime: '17:00', isAvailable: true },
+      { day: 'tuesday', startTime: '09:00', endTime: '17:00', isAvailable: true },
+      { day: 'wednesday', startTime: '09:00', endTime: '14:00', isAvailable: true },
+      { day: 'thursday', startTime: '09:00', endTime: '17:00', isAvailable: true },
+      { day: 'friday', startTime: '09:00', endTime: '17:00', isAvailable: true },
+      { day: 'saturday', startTime: '09:00', endTime: '14:00', isAvailable: true },
+      { day: 'sunday', startTime: '09:00', endTime: '17:00', isAvailable: false },
+    ],
+  },
+  {
+    id: 'd2',
+    firstName: 'Ananya',
+    lastName: 'Rao',
+    fullName: 'Dr. Ananya Rao',
+    email: 'ananya@mehtadental.in',
+    phone: '+91 99000 22222',
+    role: 'dentist',
+    isActive: true,
+    lastActivity: '2026-10-20T10:15:00Z',
+    createdAt: '2025-03-15T00:00:00Z',
+    specialization: 'Endodontics & Restorative',
+    registrationNumber: 'KA-DEN-2018-07392',
+    color: '#34D399',
+    availability: [
+      { day: 'monday', startTime: '10:00', endTime: '18:00', isAvailable: true },
+      { day: 'tuesday', startTime: '10:00', endTime: '18:00', isAvailable: true },
+      { day: 'wednesday', startTime: '10:00', endTime: '18:00', isAvailable: true },
+      { day: 'thursday', startTime: '10:00', endTime: '18:00', isAvailable: true },
+      { day: 'friday', startTime: '10:00', endTime: '18:00', isAvailable: true },
+      { day: 'saturday', startTime: '09:00', endTime: '14:00', isAvailable: true },
+      { day: 'sunday', startTime: '10:00', endTime: '18:00', isAvailable: false },
+    ],
+  },
+];
+
+export const mockStaff: User[] = [
+  {
+    id: 'r1',
+    firstName: 'Kavitha',
+    lastName: 'Sundaram',
+    fullName: 'Kavitha Sundaram',
+    email: 'kavitha@mehtadental.in',
+    phone: '+91 99000 33333',
+    role: 'receptionist',
+    isActive: true,
+    lastActivity: '2026-10-20T11:45:00Z',
+    createdAt: '2025-06-01T00:00:00Z',
+  },
+  {
+    id: 'm1',
+    firstName: 'Amit',
+    lastName: 'Joshi',
+    fullName: 'Amit Joshi',
+    email: 'amit@mehtadental.in',
+    phone: '+91 99000 44444',
+    role: 'manager',
+    isActive: true,
+    lastActivity: '2026-10-20T08:00:00Z',
+    createdAt: '2025-01-10T00:00:00Z',
+  },
+];
+
+export const mockTeamMembers: (User | Dentist)[] = [...mockDentists, ...mockStaff];
